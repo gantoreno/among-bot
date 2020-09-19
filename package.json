@@ -1,0 +1,19 @@
+{
+  "name": "mute-bot",
+  "version": "0.1.0",
+  "description": "A bot to mute everyone on Among Us parties",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Gabriel Moreno",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
