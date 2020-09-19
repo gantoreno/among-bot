@@ -1,5 +1,5 @@
-const getChannelMembers = message => {
-  return message.member.voice.channel.members;
+const notInVoiceChannel = member => {
+  return !member.voice.channel;
 };
 
 const toggleLocalMuteState = async (member, state) => {

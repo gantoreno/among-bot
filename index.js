@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const { Client } = require('discord.js');
 const {
-  getChannelMembers,
+  notInVoiceChannel,
   toggleGlobalMuteState,
   startClient,
 } = require('./extras/utils');
@@ -11,11 +11,26 @@ const {
   client.on('message', async message => {
     try {
       if (message.content === '-m') {
-        await toggleGlobalMuteState(getChannelMembers(message), true);
+        if (notInVoiceChannel(message.member)) {
+          await message.channel.send('❌ No estás en un canal de voz, sucio.');
+
+          return;
+        }
+
+        await toggleGlobalMuteState(message.member.voice.channel.members, true);
 
         await message.channel.send('🔈 ¡Shhhh! Silencio mamagüevos.');
       } else if (message.content === '-u') {
-        await toggleGlobalMuteState(getChannelMembers(message), false);
+        if (notInVoiceChannel(message.member)) {
+          await message.channel.send('❌ No estás en un canal de voz, sucio.');
+
+          return;
+        }
+
+        await toggleGlobalMuteState(
+          message.member.voice.channel.members,
+          false
+        );
 
         await message.channel.send('🔊 Ya pueden hablar putos.');
       }
