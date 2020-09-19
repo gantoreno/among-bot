@@ -4,6 +4,12 @@ This bot will easily toggle the entire voice channel's mute state, so that no on
 
 ## Usage
 
+Start the bot with:
+
+```sh
+$ npm start
+```
+
 To mute everyone, type on the chat:
 
 ```
