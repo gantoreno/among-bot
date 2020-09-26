@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const discord = require('discord.js');
+const dedent = require('dedent');
 const utils = require('./extras/utils');
 
 (async client => {
@@ -24,12 +25,14 @@ const utils = require('./extras/utils');
             {
               name: 'Acerca de mí',
               value:
-                'MuteBot silenciará a todos los jugadores en partida hasta que sea la hora de discutir y funarse sin piedad. 🔥\n',
+                'MuteBot silenciará a todos los jugadores en partida hasta que sea la hora de discutir y funarse sin piedad. 🔥',
             },
             {
               name: 'Comandos',
-              value:
-                '`-m|-mute` para mutear.\n`-u|-unmute` para desmutear.\n`-i|-info` para información.',
+              value: dedent`
+                \`-m|-mute\` para mutear.
+                \`-u|-unmute\` para desmutear.
+                \`-i|-info\` para información.`,
             },
             {
               name: 'Adóptame en tu servidor',
