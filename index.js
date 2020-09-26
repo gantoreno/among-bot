@@ -5,7 +5,7 @@ const utils = require('./extras/utils');
 
 (async client => {
   client.on('message', async message => {
-    if (message.content === '-m') {
+    if (message.content.match(/^-(m|mute)$/)) {
       if (utils.channel.notInVoiceChannel(message.member)) {
         await message.react('😐');
         await message.reply('❌ No estás en un canal de voz, sucio.');
@@ -19,7 +19,7 @@ const utils = require('./extras/utils');
       }
     }
 
-    if (message.content === '-u') {
+    if (message.content.match(/^-(u|unmute)$/)) {
       if (utils.channel.notInVoiceChannel(message.member)) {
         await message.react('😐');
         await message.reply('❌ No estás en un canal de voz, sucio.');
