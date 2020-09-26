@@ -32,7 +32,8 @@ const utils = require('./extras/utils');
               value: dedent`
                 \`-m|-mute\` para mutear.
                 \`-u|-unmute\` para desmutear.
-                \`-i|-info\` para información.`,
+                \`-i|-info\` para información.
+              `,
             },
             {
               name: 'Adóptame en tu servidor',
