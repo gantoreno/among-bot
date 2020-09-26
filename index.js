@@ -20,7 +20,7 @@ const utils = require('./extras/utils');
     }
 
     if (message.content === '-u') {
-      if (notInVoiceChannel(message.member)) {
+      if (utils.channel.notInVoiceChannel(message.member)) {
         await message.react('😐');
         await message.reply('❌ No estás en un canal de voz, sucio.');
       } else {
