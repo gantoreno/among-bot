@@ -10,7 +10,7 @@ const setLocalMuteState = async (member, state) => {
   console.log(`${action} ${member.user.username}`);
 };
 
-const seteGlobalMuteState = async (members, state) => {
+const setGlobalMuteState = async (members, state) => {
   members.forEach(async member => await setLocalMuteState(member, state));
 };
 
@@ -28,7 +28,7 @@ module.exports = {
   channel: {
     notInVoiceChannel,
     setLocalMuteState,
-    seteGlobalMuteState,
+    setGlobalMuteState,
   },
   client: {
     startClient,
