@@ -2,7 +2,7 @@ const notInVoiceChannel = member => {
   return !member.voice.channel;
 };
 
-const toggleLocalMuteState = async (member, state) => {
+const setLocalMuteState = async (member, state) => {
   await member.voice.setMute(state);
 
   const action = state ? '🔈 Muting' : '🔊 Unmuting';
@@ -10,8 +10,8 @@ const toggleLocalMuteState = async (member, state) => {
   console.log(`${action} ${member.user.username}`);
 };
 
-const toggleGlobalMuteState = async (members, state) => {
-  members.forEach(async member => await toggleLocalMuteState(member, state));
+const seteGlobalMuteState = async (members, state) => {
+  members.forEach(async member => await setLocalMuteState(member, state));
 };
 
 const startClient = async (client, token) => {
@@ -27,8 +27,8 @@ const startClient = async (client, token) => {
 module.exports = {
   channel: {
     notInVoiceChannel,
-    toggleLocalMuteState,
-    toggleGlobalMuteState,
+    setLocalMuteState,
+    seteGlobalMuteState,
     startClient,
   },
 };
