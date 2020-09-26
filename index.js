@@ -34,5 +34,5 @@ const utils = require('./extras/utils');
     }
   });
 
-  await startClient(client, process.env.DISCORD_BOT_TOKEN);
+  await utils.client.startClient(client, process.env.DISCORD_BOT_TOKEN);
 })(new discord.Client());

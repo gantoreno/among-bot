@@ -29,6 +29,8 @@ module.exports = {
     notInVoiceChannel,
     setLocalMuteState,
     seteGlobalMuteState,
+  },
+  client: {
     startClient,
   },
 };
