@@ -25,8 +25,10 @@ const startClient = async (client, token) => {
 };
 
 module.exports = {
-  notInVoiceChannel,
-  toggleLocalMuteState,
-  toggleGlobalMuteState,
-  startClient,
+  channel: {
+    notInVoiceChannel,
+    toggleLocalMuteState,
+    toggleGlobalMuteState,
+    startClient,
+  },
 };
