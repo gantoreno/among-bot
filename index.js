@@ -57,10 +57,10 @@ client.on('message', async message => {
   if (message.content.match(/^\-(m|mute)$/)) {
     if (utils.channel.notInVoiceChannel(message.member)) {
       await message.react('😐');
-      await message.reply('❌ No estás en un canal de voz, sucio.');
+      await message.reply('❌ No estás en un canal de voz.');
     } else {
       await message.react('👍🏻');
-      await message.channel.send('🔇 ¡Shhhh! Silencio mamagüevos.');
+      await message.channel.send('🔇 ¡Shhhh, silencio!.');
       await utils.channel.setGlobalMuteState(
         message.member.voice.channel.members,
         true
@@ -71,10 +71,10 @@ client.on('message', async message => {
   if (message.content.match(/^\-(u|unmute)$/)) {
     if (utils.channel.notInVoiceChannel(message.member)) {
       await message.react('😐');
-      await message.reply('❌ No estás en un canal de voz, sucio.');
+      await message.reply('❌ No estás en un canal de voz.');
     } else {
       await message.react('👍🏻');
-      await message.channel.send('🔊 Ya pueden hablar putos.');
+      await message.channel.send('🔊 Ya pueden hablar.');
       await utils.channel.setGlobalMuteState(
         message.member.voice.channel.members,
         false
