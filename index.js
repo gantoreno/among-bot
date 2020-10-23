@@ -81,6 +81,13 @@ client.on('message', async message => {
       );
     }
   }
+
+  if (message.content.match(/^\-(y|yelo)$/)) {
+    await message.react('🥶');
+    await message.reply(
+      '🧊 Pa Pedirme Yelo (feat. SOLO4) 👉🏻 https://www.instagram.com/p/CGqzUcKgTyg/?utm_source=ig_web_copy_link'
+    );
+  }
 });
 
 (async () => {
