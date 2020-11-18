@@ -83,6 +83,4 @@ client.on('message', async message => {
   }
 });
 
-(async () => {
-  await utils.client.startClient(client, process.env.DISCORD_BOT_TOKEN);
-})();
+utils.client.startClient(client, process.env.DISCORD_BOT_TOKEN);
