@@ -1,4 +1,4 @@
-# MuteBot: A Discord bot to play Among Us the right way
+# Among Bot: A Discord bot to play Among Us the right way
 
 This bot will easily toggle the entire voice channel's mute state, so that no one is able to speak when it's not supposed to (i.e. during Among Us parties).
 

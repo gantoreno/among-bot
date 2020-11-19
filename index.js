@@ -16,7 +16,7 @@ client.on('message', async message => {
     await message.channel.send(
       new discord.MessageEmbed({
         author: {
-          name: 'MuteBot',
+          name: 'Among Bot',
           iconURL:
             'https://cdn.discordapp.com/avatars/756745742261157910/5b93edacbf552e0ee3451531e6b38303.png?size=256',
         },
@@ -26,7 +26,7 @@ client.on('message', async message => {
           {
             name: 'Acerca de mí',
             value:
-              'MuteBot silenciará a todos los jugadores en partida hasta que sea la hora de discutir y funarse sin piedad. 🔥',
+              'Among Bot silenciará a todos los jugadores en partida hasta que sea la hora de discutir y funarse sin piedad. 🔥',
           },
           {
             name: 'Comandos',
@@ -39,12 +39,12 @@ client.on('message', async message => {
           {
             name: 'Adóptame en tu servidor',
             value:
-              'MuteBot funciona en todos los servidores que desees, [haz click aquí para agregarme](https://discord.com/api/oauth2/authorize?client_id=756745742261157910&permissions=0&scope=bot).',
+              'Among Bot funciona en todos los servidores que desees, [haz click aquí para agregarme](https://discord.com/api/oauth2/authorize?client_id=756745742261157910&permissions=0&scope=bot).',
           },
           {
             name: 'Contribuciones',
             value:
-              'MuteBot es open source, puedes ver el código fuente y contribuir a su desarrollo [haciendo click aquí](https://github.com/hollandsgabe/mutebot).',
+              'Among Bot es open source, puedes ver el código fuente y contribuir a su desarrollo [haciendo click aquí](https://github.com/hollandsgabe/among-bot).',
           },
         ],
         footer: {
