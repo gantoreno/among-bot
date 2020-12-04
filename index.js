@@ -44,7 +44,7 @@ client.on('message', async message => {
           {
             name: 'Contribuciones',
             value:
-              'Among Bot es open source, puedes ver el código fuente y contribuir a su desarrollo [haciendo click aquí](https://github.com/hollandsgabe/among-bot).',
+              'Among Bot es open source, puedes ver el código fuente y contribuir a su desarrollo [haciendo click aquí](https://github.com/gantoreno/among-bot).',
           },
         ],
         footer: {
